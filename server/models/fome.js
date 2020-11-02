@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const fomeSchema = new Schema({
+const formSchema = new Schema({
   eventname: { type: String, required: true },
   eventvenue: { type: String, required: true },
   startdate: { type: Date, required: true },
@@ -11,5 +11,5 @@ const fomeSchema = new Schema({
   phoneNo: { type: Number, required: true, unique: true },
 });
 
-const eventForm = mongoose.model("eventFome", fomeSchema);
+const eventForm = mongoose.model("eventForm", formSchema);
 module.exports = eventForm;

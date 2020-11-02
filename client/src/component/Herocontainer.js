@@ -1,7 +1,16 @@
 import React, { Component } from "react";
-
-export default class Herocontainer extends Component {
+import { connect } from "react-redux";
+class Herocontainer extends Component {
   render() {
-    return <div className="">{/* <p>show the events</p> */}</div>;
+    return <div className=" event-cards">
+
+      
+    </div>;
   }
 }
+
+const mapStateToProps = (state) => {
+  return state;
+};
+
+export default connect(mapStateToProps)(Herocontainer);

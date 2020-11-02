@@ -1,8 +1,8 @@
-import { LOGIN_USER, REGISTER_USER, EVENT_FORM } from "./type";
-const url = "http://localhost:8000/api/v1/users";
+import { LOGIN_USER, REGISTER_USER, EVENT_FORM, FORM_INFO } from "./type";
+const url = "http://localhost:8000/api/v1";
 
 export const signup = (data, cb) => (dispatch) => {
-  fetch(`${url}/signup`, {
+  fetch(`${url}/users/signup`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -18,7 +18,7 @@ export const signup = (data, cb) => (dispatch) => {
 };
 
 export const login = (data, cb) => (dispatch) => {
-  fetch(`${url}/login`, {
+  fetch(`${url}/users/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -44,5 +44,19 @@ export const eventForm = (data, cb) => (dispatch) => {
     .then((res) => res.json())
     .then((data) => {
       dispatch({ type: EVENT_FORM, payload: data });
+    });
+};
+
+export const formInfo = (data, cb) => (dispatch) => {
+  fetch(`${url}/event/info`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data, "check the fome data");
+      dispatch({ type: FORM_INFO, payload: data });
     });
 };

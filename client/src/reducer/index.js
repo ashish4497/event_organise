@@ -1,4 +1,4 @@
-import { LOGIN_USER, REGISTER_USER, EVENT_FORM } from "../action/type";
+import { LOGIN_USER, REGISTER_USER, FORM_INFO } from "../action/type";
 const initialState = {
   user: [],
   eventForm: [],
@@ -19,8 +19,8 @@ export default function reducer(state = initialState, action) {
         user: action.data.user,
       };
     }
-    case EVENT_FORM: {
-      console.log(action.data.userform, "ahcek the form");
+    case FORM_INFO: {
+      console.log(action.data, "ahcek the form");
       return {
         ...state,
         eventForm: action.payload,

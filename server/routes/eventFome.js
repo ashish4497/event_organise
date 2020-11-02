@@ -1,10 +1,9 @@
 const express = require("express");
-const { EventFome } = require("../../client/src/action");
 const router = express.Router();
 const EventForm = require("../models/fome");
 
 //Post request
-router.post("/event", (req, res) => {
+router.post("/", (req, res) => {
   const newForm = new EventForm(req.body);
   newForm.save((err, EventForm) => {
     if (err) {
@@ -15,7 +14,7 @@ router.post("/event", (req, res) => {
 });
 
 //Get Request
-router.get("/event", (req, res) => {
+router.get("/info", (req, res) => {
   const newForm = EventFome.find({}, (err, eventForm) => {
     if (err) {
       res.json(err);
@@ -23,6 +22,5 @@ router.get("/event", (req, res) => {
     res.json({ EventFome, sucess: true, message: "sucess" });
   });
 });
-
 
 module.exports = router;

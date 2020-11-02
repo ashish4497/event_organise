@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import Herocontainer from "./Herocontainer";
 
 class LogedHero extends Component {
+
+  handleClick = (e) => {
+    localStorage.clear();
+  }
   render() {
     return (
       <>
@@ -27,8 +31,8 @@ class LogedHero extends Component {
                     <i className="fas fa-plus"></i>
                   </Link>
                 </li>
-                <li className="log-out">
-                  <Link to="#">
+                <li className="log-out" onClick={this.handleClick}>
+                  <Link to="/">
                     <p className="text">logout</p>
                   </Link>
                 </li>
