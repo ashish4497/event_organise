@@ -2,14 +2,14 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const fomeSchema = new Schema({
-  eventname: { type: String, require: true },
-  eventvenue: { type: String, require: true },
-  startdate: { type: Date, require: true },
-  enddate: { type: Date, require: true },
-  city: { type: String, require: true },
+  eventname: { type: String, required: true },
+  eventvenue: { type: String, required: true },
+  startdate: { type: Date, required: true },
+  enddate: { type: Date, required: true },
+  city: { type: String, required: true },
   eventDescription: { type: String, require: true },
-  phoneNo: { type: Number, require: true, unique: true },
+  phoneNo: { type: Number, required: true, unique: true },
 });
 
-const eventFome = mongoose.model("eventFome", fomeSchema);
-module.exports = eventFome;
+const eventForm = mongoose.model("eventFome", fomeSchema);
+module.exports = eventForm;
