@@ -1,0 +1,23 @@
+.login_form {
+  width: 50%;
+}
+
+.login_form img {
+  height: 3rem;
+}
+
+.login_form input[type="text"],
+.login_form input[type="password"] {
+  width: 100%;
+  padding: 18px 16px;
+  margin: 12px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.login_form .btn {
+  margin-left: 0;
+}
+/*# sourceMappingURL=login.css.map */

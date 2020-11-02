@@ -1,0 +1,16 @@
+.signup_form {
+  width: 50%;
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    width: 100%;
+    padding: 18px 16px;
+    margin: 12px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  .btn {
+    margin-left: 0;
+  }
+}

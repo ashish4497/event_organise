@@ -1,0 +1,405 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  margin: 0 auto;
+  font-size: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Pangolin", cursive;
+}
+
+li {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.hero-container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.padding {
+  padding: 1.8rem 0;
+}
+
+.margin {
+  margin: 0rem 1.4rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.grid-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.grid-col-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 1fr;
+      grid-template-columns: 40% 1fr;
+}
+
+.Header {
+  background-color: #1f72c1;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  color: white;
+  line-height: 1.5;
+}
+
+.left-side .fas {
+  font-size: 2rem;
+  color: white;
+}
+
+.left-side .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.left-side h1 {
+  color: white;
+}
+
+.right-side h3 {
+  margin-left: 1.2rem;
+}
+
+.right-side h3 {
+  color: white;
+}
+
+.login_form {
+  width: 50%;
+}
+
+.login_form img {
+  height: 3rem;
+}
+
+.login_form input[type="text"],
+.login_form input[type="password"] {
+  width: 100%;
+  padding: 18px 16px;
+  margin: 12px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.login_form .btn {
+  margin-left: 0;
+}
+
+.signup_form {
+  width: 50%;
+}
+
+.signup_form input[type="text"],
+.signup_form input[type="password"],
+.signup_form input[type="email"] {
+  width: 100%;
+  padding: 18px 16px;
+  margin: 12px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.signup_form .btn {
+  margin-left: 0;
+}
+
+.hero {
+  background-color: #1f72c1;
+}
+
+.hero .hero-col-1 {
+  color: white;
+}
+
+.hero .hero-col-1 h2 {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  line-height: 1.5;
+}
+
+.hero .hero-col-1 p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.subscribe_letter .call-btn {
+  padding: 1.5rem 5rem;
+}
+
+.btn {
+  background-color: #61bd4f;
+  border-color: #61bd4f;
+  border-radius: 0.2rem;
+  color: white;
+  padding: 1.2rem 1.1rem;
+  text-decoration: none;
+  margin: 4px 2px;
+  margin-left: 1rem;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  outline: 0;
+}
+
+.trello_header {
+  background-color: #026aa7;
+}
+
+.flex li {
+  margin-right: 1rem;
+}
+
+.header_logo .fab {
+  color: white;
+}
+
+.left_side {
+  font-size: 1.4rem;
+}
+
+.left_side i {
+  color: white;
+}
+
+.left_side h1 {
+  color: white;
+  display: inline-block;
+}
+
+.bg-box {
+  border-radius: 0.3rem;
+  padding: 0.2rem 1rem;
+  background-color: #4d97c2;
+}
+
+.bg-box .fas {
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.3rem;
+}
+
+.bg-box .text {
+  color: white;
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+
+.bg-box p {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.log-out {
+  padding: 8px 2px;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+/*# sourceMappingURL=index.css.map */

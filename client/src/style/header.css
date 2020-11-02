@@ -1,0 +1,34 @@
+.Header {
+  background-color: #1f72c1;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  color: white;
+  line-height: 1.5;
+}
+
+.left-side .fas {
+  font-size: 2rem;
+  color: white;
+}
+
+.left-side .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.left-side h1 {
+  color: white;
+}
+
+.right-side h3 {
+  margin-left: 1.2rem;
+}
+
+.right-side h3 {
+  color: white;
+}
+/*# sourceMappingURL=header.css.map */

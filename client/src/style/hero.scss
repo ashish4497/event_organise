@@ -1,0 +1,38 @@
+.hero {
+  background-color: #1f72c1;
+}
+
+.hero {
+  .hero-col-1 {
+    color: white;
+    h2 {
+      font-size: 2.5rem;
+      margin: 2rem 0;
+      line-height: 1.5;
+    }
+    p {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      font-weight: 300;
+    }
+  }
+}
+.subscribe_letter {
+  .call-btn {
+    padding: 1.5rem 5rem;
+  }
+}
+.btn {
+  background-color: #61bd4f;
+  border-color: #61bd4f;
+  border-radius: 0.2rem;
+  color: white;
+  padding: 1.2rem 1.1rem;
+  text-decoration: none;
+  margin: 4px 2px;
+  margin-left: 1rem;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  outline: 0;
+}

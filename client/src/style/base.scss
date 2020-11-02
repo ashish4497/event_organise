@@ -1,0 +1,58 @@
+body {
+  margin: 0 auto;
+  font-size: 18px;
+  box-sizing: border-box;
+  font-family: "Pangolin", cursive;
+}
+
+li {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.hero-container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.padding {
+  padding: 1.8rem 0;
+}
+
+.margin {
+  margin: 0rem 1.4rem;
+}
+.center {
+  text-align: center;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-col-2 {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  // grid-gap: 10%;
+}
+// Import All files
+@import "./header.scss";
+@import "./login.scss";
+@import "./signup.scss";
+@import "./hero.scss";
+@import "./trelloHeader.scss";
+@import "./Eventfome.scss";
