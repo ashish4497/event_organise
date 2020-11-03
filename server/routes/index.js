@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const User = require("../models/user");
-router.get("*", (req, res) => {
-  res.render("index");
+
+router.get("/*", function (req, res, next) {
+  res.render("index", { title: "Event_App" });
 });
 
 module.exports = router;

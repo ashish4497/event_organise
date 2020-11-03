@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+// import { formInfo } from "../action";
 class Herocontainer extends Component {
   render() {
-    return <div className=" event-cards">
-
-      
-    </div>;
+    return (
+      // const formInfo = this.props;
+      // console.log(formInfo);
+      <>
+        <div className=" event-cards"></div>;
+      </>
+    );
   }
 }
 

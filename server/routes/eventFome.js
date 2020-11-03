@@ -1,25 +1,33 @@
 const express = require("express");
 const router = express.Router();
-const EventForm = require("../models/fome");
+const EventForm = require("../models/form");
 
 //Post request
 router.post("/", (req, res) => {
-  const newForm = new EventForm(req.body);
-  newForm.save((err, EventForm) => {
-    if (err) {
-      res.json(err);
-    }
-    res.json({ EventForm, sucess: true, message: "Event Registred sucess" });
+  EventForm.create(req.body, (err, Addeddata) => {
+    if (err) return console.log(err);
+    EventForm.find({}, (err, data) => {
+      if (err) return console.log(err);
+      return res.json({
+        Addeddata,
+        data,
+        sucess: true,
+        message: "Event Registred sucess",
+      });
+    });
   });
 });
 
 //Get Request
-router.get("/info", (req, res) => {
-  const newForm = EventFome.find({}, (err, eventForm) => {
-    if (err) {
-      res.json(err);
-    }
-    res.json({ EventFome, sucess: true, message: "sucess" });
+
+router.post("/inf", (req, res) => {
+  EventForm.find({}, (err, data) => {
+    if (err) return console.log(err);
+    return res.json({
+      data,
+      sucess: true,
+      message: "Event Registred sucess",
+    });
   });
 });
 

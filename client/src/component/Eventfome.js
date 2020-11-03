@@ -2,6 +2,7 @@ import React from "react";
 import LogedHero from "./LogedHero";
 import { eventForm } from "../action";
 import { connect } from "react-redux";
+import { fetchEvent } from "../action/index";
 class Eventform extends React.Component {
   constructor() {
     super();
@@ -26,6 +27,10 @@ class Eventform extends React.Component {
     this.props.dispatch(eventForm(this.state));
     this.props.history.push("/dashboard");
   };
+  componentDidMount() {
+    var url = "http://localhost:8000/api/v1/users/event/inf";
+    this.props.dispatch(fetchEvent(url));
+  }
   render() {
     return (
       <>

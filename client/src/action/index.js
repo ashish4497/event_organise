@@ -1,8 +1,8 @@
 import { LOGIN_USER, REGISTER_USER, EVENT_FORM, FORM_INFO } from "./type";
-const url = "http://localhost:8000/api/v1";
+const url = "http://localhost:8000/api/v1/users";
 
 export const signup = (data, cb) => (dispatch) => {
-  fetch(`${url}/users/signup`, {
+  fetch(`${url}/signup`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -18,7 +18,7 @@ export const signup = (data, cb) => (dispatch) => {
 };
 
 export const login = (data, cb) => (dispatch) => {
-  fetch(`${url}/users/login`, {
+  fetch(`${url}/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -47,16 +47,22 @@ export const eventForm = (data, cb) => (dispatch) => {
     });
 };
 
-export const formInfo = (data, cb) => (dispatch) => {
-  fetch(`${url}/event/info`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data, "check the fome data");
-      dispatch({ type: FORM_INFO, payload: data });
-    });
+export const fetchEvent = (url) => {
+  // console.log("in the fetch event");
+  return function (dispatch) {
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then(({ data }) => {
+        // console.log(data, "check fetch information");
+        dispatch({
+          type: FORM_INFO,
+          payload: data,
+        });
+      });
+  };
 };

@@ -11,5 +11,6 @@ const formSchema = new Schema({
   phoneNo: { type: Number, required: true, unique: true },
 });
 
-const eventForm = mongoose.model("eventForm", formSchema);
-module.exports = eventForm;
+const EventForm = mongoose.model("EventForm", formSchema);
+
+module.exports = EventForm;
