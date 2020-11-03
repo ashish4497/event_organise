@@ -138,7 +138,7 @@ body {
   font-size: 18px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Pangolin", cursive;
+  font-family: "Roboto", sans-serif;
 }
 
 li {
@@ -167,6 +167,12 @@ li {
   text-align: center;
 }
 
+.heading {
+  text-transform: Capitalize;
+  font-size: 1.8rem;
+  margin: 2rem 0;
+}
+
 .grid-2 {
   display: -ms-grid;
   display: grid;
@@ -190,8 +196,9 @@ a {
 .grid-col-2 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 40% 1fr;
-      grid-template-columns: 40% 1fr;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px 0;
 }
 
 .Header {
@@ -228,12 +235,14 @@ a {
   color: white;
 }
 
-.login_form {
-  width: 50%;
+.bg-color {
+  background-color: #1f72c1;
 }
 
-.login_form img {
-  height: 3rem;
+.login_form {
+  color: white;
+  width: 30%;
+  padding: 8rem 0;
 }
 
 .login_form input[type="text"],
@@ -245,14 +254,18 @@ a {
   border: 1px solid #ccc;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-size: 1.2rem;
+  text-transform: capitalize;
 }
 
 .login_form .btn {
   margin-left: 0;
+  padding: 0.8rem 2.5rem;
 }
 
 .signup_form {
-  width: 50%;
+  width: 30%;
+  padding: 8rem 0;
 }
 
 .signup_form input[type="text"],
@@ -269,6 +282,7 @@ a {
 
 .signup_form .btn {
   margin-left: 0;
+  padding: 0.8rem 2.5rem;
 }
 
 .hero {
@@ -371,7 +385,31 @@ a {
   padding: 8px 2px;
 }
 
-input[type=text], select {
+.parent-bx {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  background-color: #026aa7;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: 80%;
+}
+
+.parent-bx p {
+  margin: 0.5rem 0;
+}
+
+.parent-bx .flex {
+  margin: 1rem 0;
+}
+
+.fome_container {
+  width: 60%;
+}
+
+input[type="text"],
+select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -382,9 +420,37 @@ input[type=text], select {
           box-sizing: border-box;
 }
 
-input[type=submit] {
+input[type="email"],
+select {
   width: 100%;
-  background-color: #4CAF50;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type="phone"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #4caf50;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -393,13 +459,12 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   background-color: #45a049;
 }
 
-div {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+input,
+label {
+  margin: 0.4rem 0;
 }
 /*# sourceMappingURL=index.css.map */

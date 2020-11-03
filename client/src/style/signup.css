@@ -1,5 +1,5 @@
 .signup_form {
-  width: 50%;
+  width: 30%;
 }
 
 .signup_form input[type="text"],
@@ -16,5 +16,6 @@
 
 .signup_form .btn {
   margin-left: 0;
+  padding: 0.8rem 2.5rem;
 }
 /*# sourceMappingURL=signup.css.map */

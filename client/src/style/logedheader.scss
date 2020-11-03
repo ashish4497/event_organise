@@ -1,4 +1,4 @@
-.trello_header {
+.loged_header {
   background-color: #026aa7;
 }
 
@@ -45,4 +45,8 @@
 }
 .log-out {
   padding: 8px 2px;
+  a {
+    color: white;
+    text-transform: capitalize;
+  }
 }

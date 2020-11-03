@@ -1,21 +1,19 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Herocontainer from "./Herocontainer";
 
 class LogedHero extends Component {
-
   handleClick = (e) => {
     localStorage.clear();
-  }
+  };
   render() {
     return (
       <>
-        <div className="trello_header ">
+        <div className="loged_header ">
           <nav className="flex padding container ">
             <div className="left_side">
               <ul>
                 <li className="">
-                  <Link to="#">
+                  <Link to="/dashboard">
                     <i class="fas fa-ankh"></i>
                     <h1 className="text">Event organisers</h1>
                   </Link>
@@ -39,11 +37,6 @@ class LogedHero extends Component {
               </ul>
             </div>
           </nav>
-        </div>
-        <div className="trello_hero_container">
-          <div className="container padding">
-            <Herocontainer />
-          </div>
         </div>
       </>
     );

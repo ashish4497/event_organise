@@ -1,0 +1,22 @@
+.event-cards {
+  background-color: #2e84b6;
+  h1 {
+    color: white;
+  }
+}
+.parent-bx {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  box-shadow: 4px 8px #fff;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: 80%;
+  p {
+    margin: 0.5rem 0;
+  }
+  .flex {
+    margin: 1rem 0;
+  }
+}

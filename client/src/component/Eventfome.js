@@ -1,8 +1,8 @@
 import React from "react";
-import LogedHero from "./LogedHero";
 import { eventForm } from "../action";
 import { connect } from "react-redux";
-import { fetchEvent } from "../action/index";
+import LogedHero from "./LogedHero";
+
 class Eventform extends React.Component {
   constructor() {
     super();
@@ -27,15 +27,13 @@ class Eventform extends React.Component {
     this.props.dispatch(eventForm(this.state));
     this.props.history.push("/dashboard");
   };
-  componentDidMount() {
-    var url = "http://localhost:8000/api/v1/users/event/inf";
-    this.props.dispatch(fetchEvent(url));
-  }
+
   render() {
     return (
       <>
         <LogedHero />
-        <div className="container fome_container">
+        <h1 className="container center heading">Add New Event </h1>
+        <div className="container fome_container padding">
           <form action="/action_page.php">
             <label for="eventname">Event Name</label>
             <input
@@ -58,7 +56,6 @@ class Eventform extends React.Component {
             />
 
             <label for="startdate">Event start date:</label>
-
             <input
               type="date"
               id="start"

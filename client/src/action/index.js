@@ -11,7 +11,6 @@ export const signup = (data, cb) => (dispatch) => {
   })
     .then((res) => res.json())
     .then((data) => {
-      console.log(data, "inside action login");
       dispatch({ type: REGISTER_USER, data });
       cb(true);
     });
@@ -28,9 +27,13 @@ export const login = (data, cb) => (dispatch) => {
     .then((res) => res.json())
     .then((data) => {
       console.log(data, "inside action login");
+      console.log(data, "check the user in the action ");
+      localStorage.setItem("authToken", data.token);
       dispatch({ type: LOGIN_USER, payload: data });
       cb(true);
-    });
+    })
+
+    .catch((err) => console.log(err));
 };
 
 export const eventForm = (data, cb) => (dispatch) => {

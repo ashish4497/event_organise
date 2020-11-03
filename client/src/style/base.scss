@@ -2,7 +2,7 @@ body {
   margin: 0 auto;
   font-size: 18px;
   box-sizing: border-box;
-  font-family: "Pangolin", cursive;
+  font-family: "Roboto", sans-serif;
 }
 
 li {
@@ -30,6 +30,12 @@ li {
   text-align: center;
 }
 
+.heading {
+  text-transform: Capitalize;
+  font-size: 1.8rem;
+  margin: 2rem 0;
+}
+
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -46,13 +52,14 @@ a {
 
 .grid-col-2 {
   display: grid;
-  grid-template-columns: 40% 1fr;
-  // grid-gap: 10%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px 0;
 }
 // Import All files
 @import "./header.scss";
 @import "./login.scss";
 @import "./signup.scss";
 @import "./hero.scss";
-@import "./trelloHeader.scss";
+@import "./logedheader.scss";
+@import "./herocontainer.scss";
 @import "./Eventfome.scss";

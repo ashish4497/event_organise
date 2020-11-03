@@ -1,5 +1,5 @@
 .signup_form {
-  width: 50%;
+  width: 30%;
   input[type="text"],
   input[type="password"],
   input[type="email"] {
@@ -12,5 +12,6 @@
   }
   .btn {
     margin-left: 0;
+    padding: 0.8rem 2.5rem;
   }
 }

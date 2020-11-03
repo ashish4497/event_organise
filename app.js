@@ -9,15 +9,29 @@ const path = require("path");
 const port = 8000;
 const usersRoute = require("./server/routes/users");
 const eventRoute = require("./server/routes/eventFome");
-mongoose.connect(
-  "mongodb://localhost:27017/events",
-  { useNewUrlParser: true },
-  function (err, connection) {
-    if (err) throw err;
-    else console.log("connected to mongodb");
-  }
-);
+// mongoose.connect(
+//   "mongodb://localhost:27017/events",
+//   { useNewUrlParser: true },
+//   function (err, connection) {
+//     if (err) throw err;
+//     else console.log("connected to mongodb");
+//   }
+// );
 
+// const MongoClient = require("mongodb").MongoClient;
+const uri =
+  "mongodb+srv://ashish:ashish@cluster0.kw1ap.mongodb.net/<organiseEvent>?retryWrites=true&w=majority";
+mongoose.connect(uri, { useUnifiedTopology: true }, (err) => {
+  try {
+    if (err) {
+      console.log(err, "Not Connected To DB");
+    } else {
+      console.log("Connected Sucessfully TO DB");
+    }
+  } catch (err) {
+    console.log(err.message);
+  }
+});
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));

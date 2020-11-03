@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { signup } from "../action/index";
+import Header from "./Header";
 
 class Signup extends React.Component {
   constructor(props) {
@@ -32,8 +33,11 @@ class Signup extends React.Component {
   render() {
     return (
       <>
-        <section className="signup_form container padding">
-          <div className="form">
+        <Header />
+        <section className="bg-color">
+          <div className="signup_form container padding">
+            <h1 className="heading center">SignUp</h1>
+
             <form>
               <label>
                 <b>Name</b>
@@ -76,7 +80,7 @@ class Signup extends React.Component {
                 required
               />
               <button type="submit" className="btn" onClick={this.handleSubmit}>
-                Signup
+                SignUp
               </button>
             </form>
           </div>

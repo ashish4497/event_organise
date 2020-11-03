@@ -1,6 +1,7 @@
 import React from "react";
 import { login } from "../action";
 import { connect } from "react-redux";
+import Header from "./Header";
 class Login extends React.Component {
   constructor(props) {
     super(props);
@@ -29,11 +30,13 @@ class Login extends React.Component {
   render() {
     return (
       <>
-        <section className="login_form container padding">
-          <div className="form">
+        <Header />
+        <section className="bg-color">
+          <div className="login_form container padding">
             <form>
+              <h1 className="heading center">Login</h1>
               <label for="username">
-                <b>username</b>
+                <b>Username</b>
               </label>
               <input
                 type="text"

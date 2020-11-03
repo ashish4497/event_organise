@@ -1,11 +1,11 @@
 .fome_container {
-  width: 60%;
+  width: 40%;
 }
 
 input[type="text"],
 select {
   width: 100%;
-  padding: 12px 20px;
+  padding: 14px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -14,10 +14,9 @@ select {
           box-sizing: border-box;
 }
 
-input[type="email"],
-select {
+input[type="date"] {
   width: 100%;
-  padding: 12px 20px;
+  padding: 14px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -29,7 +28,7 @@ select {
 input[type="phone"],
 select {
   width: 100%;
-  padding: 12px 20px;
+  padding: 14px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -46,7 +45,8 @@ input[type="submit"] {
   width: 100%;
   background-color: #4caf50;
   color: white;
-  padding: 14px 20px;
+  font-size: 1.2rem;
+  padding: 18px 20px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
@@ -57,8 +57,8 @@ input[type="submit"]:hover {
   background-color: #45a049;
 }
 
-input,
 label {
+  display: block;
   margin: 0.4rem 0;
 }
 /*# sourceMappingURL=Eventfome.css.map */

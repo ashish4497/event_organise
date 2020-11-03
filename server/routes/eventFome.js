@@ -20,7 +20,7 @@ router.post("/", (req, res) => {
 
 //Get Request
 
-router.post("/inf", (req, res) => {
+router.post("/info", (req, res) => {
   EventForm.find({}, (err, data) => {
     if (err) return console.log(err);
     return res.json({
