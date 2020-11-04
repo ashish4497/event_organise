@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchEvent } from "../action/index";
 import LogedHero from "./LogedHero";
+// Heroku container
 class Herocontainer extends Component {
   componentDidMount() {
     var url = "http://localhost:8000/api/v1/users/event/info";
