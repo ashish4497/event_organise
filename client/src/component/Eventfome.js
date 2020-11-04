@@ -26,6 +26,7 @@ class Eventform extends React.Component {
     e.preventDefault();
     this.props.dispatch(eventForm(this.state));
     this.props.history.push("/dashboard");
+    window.location.reload();
   };
 
   render() {
@@ -92,17 +93,19 @@ class Eventform extends React.Component {
               id="eventDis"
               rows="6"
               cols="100"
+              maxlength="100"
               name="eventDescription"
-              placeholder="Event Detail"
+              placeholder="Event Detail max length 100 words"
               onChange={this.handleChange}
               required
             />
             <label for="phoneNo">Mobile Nb.</label>
             <input
-              type="phone"
+              type="tel"
               id="phone"
               name="phoneNo"
               placeholder="Your Mobile No."
+              pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
               onChange={this.handleChange}
               required
             />
